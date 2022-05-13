@@ -50,7 +50,7 @@ return [
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'FanceSOL',
 
     /*
     |--------------------------------------------------------------------------
@@ -246,12 +246,20 @@ return [
             'can'  => 'manage-blog',
         ],
         [
+            'text'        => 'Categorias',
+            'url'         => 'categorias',
+            'icon'        => 'fas fa-archive',
+            'label'       => 'CRUD',
+            'label_color' => 'primary',
+        ],
+        [
             'text'        => 'Articulos',
             'url'         => 'articulos',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 'CRUD',
             'label_color' => 'success',
         ],
+                
         ['header' => 'Configuracion de Cuenta'],
         [
             'text' => 'Perfil de Usuario',
@@ -259,12 +267,12 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Cambiar Pasword',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'multilevel',
+            'text'    => 'Admin Roles',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
@@ -301,19 +309,19 @@ return [
                 ],
             ],
         ],
-        ['header' => 'labels'],
+        ['header' => 'REPORTES'],
         [
-            'text'       => 'important',
+            'text'       => 'General',
             'icon_color' => 'red',
             'url'        => '#',
         ],
         [
-            'text'       => 'warning',
+            'text'       => 'Ventas Dia',
             'icon_color' => 'yellow',
             'url'        => '#',
         ],
         [
-            'text'       => 'information',
+            'text'       => 'Existentes',
             'icon_color' => 'cyan',
             'url'        => '#',
         ],

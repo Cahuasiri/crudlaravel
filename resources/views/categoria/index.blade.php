@@ -3,30 +3,26 @@
 @section('title', 'CRUD laravel 8')
 
 @section('content')
-<a href="articulos/create" class='btn btn-primary'>CREAR</a>
+<a href="categorias/create" class='btn btn-primary'>CREAR</a>
 
-<table id="articulos" class="table table-striped">
+<table id="categorias" class="table table-striped">
     <thead>
         <tr>
             <th scope="col"> ID </th>
             <th scope="col"> CODIGO </th>
             <th scope="col"> DESCRIPCION </th>
-            <th scope="col"> CANTIDAD </th>
-            <th scope="col"> PRECIO </th>
             <th scope="col"> ACCIONES </th>
         </tr>
     </thead>
     <tbody>
-        @foreach($articulos as $articulo)
+         @foreach($categorias as $categoria)
             <tr>
-                <td>{{ $articulo->id }}</td>
-                <td>{{ $articulo->codigo }}</td>
-                <td>{{ $articulo->descripcion }}</td>
-                <td>{{ $articulo->cantidad }}</td>
-                <td>{{ $articulo->precio }}</td>
+                <td>{{ $categoria->id }}</td>
+                <td>{{ $categoria->codigo }}</td>
+                <td>{{ $categoria->descripcion }}</td>              
                 <td>
-                    <form action="{{ route ('articulos.destroy',$articulo->id) }}" method="POST">
-                        <a href="/articulos/{{ $articulo->id }}/edit" class="btn btn-info">Editar</a>
+                    <form action="{{ route ('categorias.destroy',$categoria->id) }}" method="POST">
+                        <a href="/categorias/{{ $categoria->id }}/edit" class="btn btn-info">Editar</a>
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger"> Borrar </button>
@@ -50,7 +46,7 @@
 
         <script>
             $(document).ready(function() {
-              $('#articulos').DataTable({
+              $('#categorias').DataTable({
                 "lengthMenu" : [[5,10,50,-1],[5,10,50,"all"]]
               });
                 });

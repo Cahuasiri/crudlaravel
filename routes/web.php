@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Route::resource('articulos', 'App\Http\Controllers\ArticuloController');
+Route::resource('categorias', 'App\Http\Controllers\CategoriaController');
 
 Route::middleware([
     'auth:sanctum',
